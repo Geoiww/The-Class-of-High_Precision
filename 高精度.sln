@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "高精度", "高精度\高精度.vcxproj", "{F96BE021-CAB8-473F-875A-6E59B537A839}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Debug|x64.ActiveCfg = Debug|x64
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Debug|x64.Build.0 = Debug|x64
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Debug|x86.ActiveCfg = Debug|Win32
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Debug|x86.Build.0 = Debug|Win32
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Release|x64.ActiveCfg = Release|x64
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Release|x64.Build.0 = Release|x64
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Release|x86.ActiveCfg = Release|Win32
+		{F96BE021-CAB8-473F-875A-6E59B537A839}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D66D6442-FD42-4A52-82A8-D7A69C68525F}
+	EndGlobalSection
+EndGlobal
