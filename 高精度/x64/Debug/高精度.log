@@ -1,2 +1,22 @@
-﻿  main.cpp
+﻿  High_Precision.cpp
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(77,37): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(79,22): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(79,40): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(121,18): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(124,22): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(124,40): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(156,18): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(156,32): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(201,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(201,35): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(386,12): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(391,13): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(399,13): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(402,12): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(412,12): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(417,13): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(421,13): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(426,12): warning C4305: “return”: 从“int”到“bool”截断
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(403): warning C4715: “High_Precision::operator>”: 不是所有的控件路径都返回值
+C:\Users\Administrator\source\repos\高精度\高精度\High_Precision.cpp(427): warning C4715: “High_Precision::operator<”: 不是所有的控件路径都返回值
   高精度.vcxproj -> C:\Users\Administrator\source\repos\高精度\x64\Debug\高精度.exe

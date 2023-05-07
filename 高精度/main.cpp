@@ -17,11 +17,11 @@ int main()
 	High_Precision  n;
 	High_Precision a;
 	//cin >> a >> n;
-	string b;
-	cin >> a >> n;
-	a = a - n;
-	cout << a;
-	//n = A(a);
-	//cout << n;
+	//string b;
+	cin >> a;
+	//a = a - n;
+	//cout << a;
+	n = A(a);
+	cout << n;
 	return 0;
 }

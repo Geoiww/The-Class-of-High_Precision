@@ -42,7 +42,7 @@ public:
 	High_Precision operator ++();
 	High_Precision operator --();
 	bool operator >(High_Precision);
-	bool operator <(High_Precision) const;
+	bool operator <(High_Precision);
 	bool operator >(int);
 	bool operator <(int);
 	int Compare(string, string);

@@ -13,8 +13,10 @@ High_Precision::High_Precision(string n)
 		is_Neg = 1;
 		n[0] = 0;
 	}
-	a = n;
-
+	else {
+		is_Neg = 0;
+		a = n;
+	}
 }
 
 High_Precision::High_Precision(int n)
@@ -24,7 +26,10 @@ High_Precision::High_Precision(int n)
 		is_Neg = 1;
 		s[0] = 0;
 	}
-	a = s;
+	else {
+		is_Neg = 0;
+		a = s;
+	}
 }
 
 High_Precision::High_Precision(vector<string> n)
@@ -40,7 +45,7 @@ High_Precision::High_Precision(vector<string> n, bool is_neg)
 
 High_Precision::High_Precision(string n, bool Neg)
 {
-	if (n[0] = '-') {
+	if (n[0] == '-') {
 		is_Neg = Neg;
 		n[0] = 0;
 	}
@@ -261,7 +266,7 @@ High_Precision  High_Precision ::operator*(High_Precision  f)
 High_Precision  High_Precision ::operator/(High_Precision  f)
 {
 	if (is_Neg == f.is_Neg)
-		return High_Precision(myDivide(a,f.a), 0);
+		return High_Precision(myDivide(a, f.a), 0);
 	else
 		return High_Precision(myDivide(a, f.a), 1);
 	return High_Precision("NULL");
@@ -270,25 +275,25 @@ High_Precision  High_Precision ::operator/(High_Precision  f)
 High_Precision  High_Precision ::operator+(int f)
 {
 	string n = to_string(f);
-	return *this+High_Precision(n);
+	return *this + High_Precision(n);
 }
 
 High_Precision  High_Precision ::operator-(int f)
 {
 	string n = to_string(f);
-	return *this-High_Precision(n);
+	return *this - High_Precision(n);
 }
 
 High_Precision  High_Precision ::operator*(int f)
 {
 	string n = to_string(f);
-	return *this*High_Precision(n);
+	return *this * High_Precision(n);
 }
 
 High_Precision  High_Precision ::operator/(int f)
 {
 	string n = to_string(f);
-	return *this/High_Precision(n);
+	return *this / High_Precision(n);
 }
 
 High_Precision  High_Precision ::operator=(High_Precision  f)
@@ -375,65 +380,62 @@ High_Precision High_Precision::operator--()
 
 bool High_Precision::operator>(High_Precision f)
 {
-	High_Precision g = *this;
-	//先看符号
-	if (g.a[0] != '-' && f.a[0] == '-')
-		return true;
-	else if (g.a[0] == '-' && f.a[0] != '-')
-		return false;
-	bool is_Neg = (g.a[0] != '-') ? false : true;
-	g.a[0] = '0';
-	f.a[0] = '0';//将正负数记录，再去掉负号,方便比较
-	//先比较位数大小，如位数相同则轮流比较每一位大小
-	if (g.a.length() > f.a.length())
-		return is_Neg ? false : true;   //要是负数就相反
-	else if (g.a.length() < f.a.length())
-		return is_Neg ? true : false;
-	else {
-		for (int i = 0; i < g.a.length(); i++) {
-			if (g.a[i] > f.a[i])
-				return is_Neg ? false : true;
-			else if (g.a[i] < f.a[i])
-				return is_Neg ? true : false;
-		}
-		return is_Neg ? true : false;
+	bool n = is_Neg, m = f.is_Neg;
+	string a = High_Precision::a, b = f.a;
+	if (n == 1 && m == 0)
+		return -1;
+	else if (n == 0 && m == 1)
+		return 1;
+	else if (myCompare(a, b) == 1) {
+		if (n == 1 && m == 1)
+			return -1;
+		else
+			return 1;
 	}
-}
-
-bool High_Precision::operator<(High_Precision f) const
-{
-	High_Precision g = *this;
-	if (g.a[0] != '-' && f.a[0] == '-')
-		return false;
-	else if (g.a[0] == '-' && f.a[0] != '-')
-		return true;
-	bool is_Neg = (g.a[0] != '-') ? false : true;
-	g.a[0] = '0';
-	f.a[0] = '0';//将正负数记录，再去掉负号,方便比较
-	//先比较位数大小，如位数相同则轮流比较每一位大小
-	if (g.a.length() > f.a.length())
-		return is_Neg ? true : false;   //要是负数就相反
-	else if (g.a.length() < f.a.length())
-		return is_Neg ? false : true;
-	else {
-		for (int i = 0; i < g.a.length(); i++) {
-			if (g.a[i] > f.a[i])
-				return is_Neg ? true : false;
-			else if (g.a[i] < f.a[i])
-				return is_Neg ? false : true;
-		}
-		return is_Neg ? false : true;
+	else if (myCompare(a, b) == -1) {
+		if (n == 1 && m == 1)
+			return 1;
+		else
+			return -1;
 	}
+	else if (myCompare(a, b) == 0)
+		return -1;
 }
 
-bool High_Precision::operator>(int)
+bool High_Precision::operator<(High_Precision f)
 {
-	return false;
+	bool n = is_Neg, m = f.is_Neg;
+	string a = High_Precision::a, b = f.a;
+	if (n == 1 && m == 0)
+		return 1;
+	else if (n == 0 && m == 1)
+		return -1;
+	else if (myCompare(a, b) == 1) {
+		if (n == 1 && m == 1)
+			return 1;
+		else
+			return -1;
+	}
+	else if (myCompare(a, b) == -1) {
+		if (n == 1 && m == 1)
+			return -1;
+		else
+			return 1;
+	}
+	else if (myCompare(a, b) == 0)
+		return -1;
 }
 
-bool High_Precision::operator<(int)
+bool High_Precision::operator>(int f)
 {
-	return false;
+	High_Precision n = f;
+	return *this > n;
+}
+
+bool High_Precision::operator<(int f)
+{
+	High_Precision n = f;
+	return *this < n;
 }
 
 int High_Precision::Compare(string a, string b)
@@ -448,6 +450,8 @@ string High_Precision::print()
 
 ostream& operator<<(ostream& os, High_Precision& f)
 {
+	if (f.is_Neg)
+		os << '-';
 	os << f.a;
 	return os;
 }
@@ -456,6 +460,6 @@ istream& operator>>(istream& is, High_Precision& f)
 {
 	string s;
 	is >> s;
-	f.a = s;
+	f = s;
 	return is;
 }
