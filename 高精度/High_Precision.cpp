@@ -383,12 +383,12 @@ bool High_Precision::operator>(High_Precision f)
 	bool n = is_Neg, m = f.is_Neg;
 	string a = High_Precision::a, b = f.a;
 	if (n == 1 && m == 0)
-		return -1;
+		return 0;
 	else if (n == 0 && m == 1)
 		return 1;
 	else if (myCompare(a, b) == 1) {
 		if (n == 1 && m == 1)
-			return -1;
+			return 0;
 		else
 			return 1;
 	}
@@ -396,10 +396,10 @@ bool High_Precision::operator>(High_Precision f)
 		if (n == 1 && m == 1)
 			return 1;
 		else
-			return -1;
+			return 0;
 	}
 	else if (myCompare(a, b) == 0)
-		return -1;
+		return 0;
 }
 
 bool High_Precision::operator<(High_Precision f)
@@ -409,16 +409,16 @@ bool High_Precision::operator<(High_Precision f)
 	if (n == 1 && m == 0)
 		return 1;
 	else if (n == 0 && m == 1)
-		return -1;
+		return 0;
 	else if (myCompare(a, b) == 1) {
 		if (n == 1 && m == 1)
 			return 1;
 		else
-			return -1;
+			return 0;
 	}
 	else if (myCompare(a, b) == -1) {
 		if (n == 1 && m == 1)
-			return -1;
+			return 0;
 		else
 			return 1;
 	}
